@@ -73,16 +73,17 @@ public class Main {
         System.out.print("Enter your budget: ");
         double budget = sc.nextDouble();
         for (int i = 0; i < cnt; i++) {
-            if (a[i].type.equals(type) && a[i].rate <= budget && a[i].isAvailable) {
+            if (a[i].getType().equals(type) && a[i].getRate() <= budget && a[i].isAvailable) {
                 System.out.println();
-                a[i].display();
+                // a[i].display();
+                System.out.println(a[i]);
             }
         }
         System.out.println("Enter ID of vehicle to rent: ");
         sc.nextLine();
         String ID = sc.nextLine();
         for (int i = 0; i < cnt; i++) {
-            if (a[i].ID.equals(ID)) {
+            if (a[i].getID().equals(ID)) {
                 a[i].setIsAvailable(false);
                 System.out.println("Vehicle rented successfully.");
                 return;
@@ -93,9 +94,10 @@ public class Main {
     void showAvailable(Scanner sc) {
         System.out.println("Available vehicles: ");
         for (int i = 0; i < cnt; i++) {
-            if (a[i].isAvailable) {
+            if (a[i].getIsAvailable()) {
                 System.out.println();
-                a[i].display();
+                // a[i].display();
+                System.out.println(a[i]);
             }
         }
     }
@@ -103,9 +105,10 @@ public class Main {
     void showRented(Scanner sc) {
         System.out.println("Rented vehicles: ");
         for (int i = 0; i < cnt; i++) {
-            if (!a[i].isAvailable) {
+            if (!a[i].getIsAvailable()) {
                 System.out.println();
-                a[i].display();
+                // a[i].display();
+                System.out.println(a[i]);
             }
         }
     }
@@ -113,8 +116,8 @@ public class Main {
     void Calculate(Scanner sc) {
         double total = 0;
         for (int i = 0; i < cnt; i++) {
-            if (!a[i].isAvailable) {
-                total += a[i].rate;
+            if (!a[i].getIsAvailable()) {
+                total += a[i].getRate();
             }
         }
         System.out.println("Total rental earnings: " + total);
