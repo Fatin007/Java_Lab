@@ -1,6 +1,6 @@
 package com.fatin.vehicle_rentals;
 
-import java.util.Scanner;
+import java.util.*;
 
 /**
  *
