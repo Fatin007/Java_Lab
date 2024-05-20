@@ -24,3 +24,4 @@ hs_err_pid*
 replay_pid*
 /Product_Inventory/target/
 /Vehicle_Rentals/target/
+/Bank_Management/target/
