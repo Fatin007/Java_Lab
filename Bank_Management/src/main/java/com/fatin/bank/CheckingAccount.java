@@ -12,14 +12,6 @@ public class CheckingAccount extends BankAccount{
         this.transectionLimit = transectionLimit;
     }
 
-    public double getTransectionLimit() {
-        return transectionLimit;
-    }
-
-    public void setTransectionLimit(double transectionLimit) {
-        this.transectionLimit = transectionLimit;
-    }
-
     public void deductTransectionFee(double amount) {
         double fee = amount * 0.02;
         if (fee > transectionLimit){
@@ -30,5 +22,10 @@ public class CheckingAccount extends BankAccount{
 
     public String toString() {
         return super.toString() + "\nTransection Limit: " + transectionLimit + "\n";
+    }
+
+    public void deposit(double amount) {
+        super.deposit(amount);
+        deductTransectionFee(amount);
     }
 }
