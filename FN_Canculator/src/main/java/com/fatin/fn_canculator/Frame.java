@@ -14,7 +14,6 @@ public class Frame extends JFrame implements ActionListener{
     
     double num1=0,num2=0,result=0;
     char op;
-    
     // End of variables declaration//GEN-END:variables
     /**
      * Creates new form Frame
