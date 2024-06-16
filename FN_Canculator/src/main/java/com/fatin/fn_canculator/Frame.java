@@ -13,7 +13,8 @@ public class Frame extends JFrame implements ActionListener{
     public JTextField tf;
     
     double num1=0,num2=0,result=0;
-    char op;
+    char op='+';
+    Cursor cur = new Cursor(Cursor.HAND_CURSOR);
     // End of variables declaration//GEN-END:variables
     /**
      * Creates new form Frame
@@ -65,7 +66,7 @@ public class Frame extends JFrame implements ActionListener{
         acBtn.setForeground(new Color(0, 0, 0));
         acBtn.setText("AC");
         acBtn.setBorderPainted(false);
-        acBtn.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        acBtn.setCursor(cur);
         acBtn.setFocusable(false);
         acBtn.addActionListener(this);
 
@@ -80,7 +81,7 @@ public class Frame extends JFrame implements ActionListener{
         cBtn.setForeground(new Color(0, 0, 0));
         cBtn.setText("C");
         cBtn.setBorderPainted(false);
-        cBtn.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        cBtn.setCursor(cur);
         cBtn.setFocusable(false);
         cBtn.addActionListener(this);
 
@@ -89,7 +90,7 @@ public class Frame extends JFrame implements ActionListener{
         addBtn.setForeground(new Color(0, 0, 0));
         addBtn.setText("+");
         addBtn.setBorderPainted(false);
-        addBtn.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        addBtn.setCursor(cur);
         addBtn.setFocusable(false);
         addBtn.addActionListener(this);
 
@@ -105,7 +106,7 @@ public class Frame extends JFrame implements ActionListener{
         numBtn1.setForeground(new Color(255, 255, 255));
         numBtn1.setText("1");
         numBtn1.setBorderPainted(false);
-        numBtn1.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        numBtn1.setCursor(cur);
         numBtn1.setFocusable(false);
         numBtn1.addActionListener(this);
 
@@ -114,6 +115,7 @@ public class Frame extends JFrame implements ActionListener{
         numBtn2.setForeground(new Color(255, 255, 255));
         numBtn2.setText("2");
         numBtn2.setBorderPainted(false);
+        numBtn2.setCursor(cur);
         numBtn2.setFocusable(false);
         numBtn2.addActionListener(this);    
 
@@ -122,7 +124,7 @@ public class Frame extends JFrame implements ActionListener{
         numBtn3.setForeground(new Color(255, 255, 255));
         numBtn3.setText("3");
         numBtn3.setBorderPainted(false);
-        numBtn3.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        numBtn3.setCursor(cur);
         numBtn3.setFocusable(false);
         numBtn3.addActionListener(this);
 
@@ -131,7 +133,7 @@ public class Frame extends JFrame implements ActionListener{
         numBtn0.setForeground(new Color(255, 255, 255));
         numBtn0.setText("0");
         numBtn0.setBorderPainted(false);
-        numBtn0.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        numBtn0.setCursor(cur);
         numBtn0.setFocusable(false);
         numBtn0.addActionListener(this);
 
@@ -140,7 +142,7 @@ public class Frame extends JFrame implements ActionListener{
         dotBtn.setForeground(new Color(255, 255, 255));
         dotBtn.setText(".");
         dotBtn.setBorderPainted(false);
-        dotBtn.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        dotBtn.setCursor(cur);
         dotBtn.setFocusable(false);
         dotBtn.addActionListener(this);
 
@@ -149,7 +151,7 @@ public class Frame extends JFrame implements ActionListener{
         eqlBtn.setForeground(new Color(0, 0, 0));
         eqlBtn.setText("=");
         eqlBtn.setBorderPainted(false);
-        eqlBtn.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        eqlBtn.setCursor(cur);
         eqlBtn.setFocusable(false);
         eqlBtn.addActionListener(this);
 
@@ -158,7 +160,7 @@ public class Frame extends JFrame implements ActionListener{
         numBtn4.setForeground(new Color(255, 255, 255));
         numBtn4.setText("4");
         numBtn4.setBorderPainted(false);
-        numBtn4.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        numBtn4.setCursor(cur);
         numBtn4.setFocusable(false);
         numBtn4.addActionListener(this);
 
@@ -167,7 +169,7 @@ public class Frame extends JFrame implements ActionListener{
         numBtn5.setForeground(new Color(255, 255, 255));
         numBtn5.setText("5");
         numBtn5.setBorderPainted(false);
-        numBtn5.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        numBtn5.setCursor(cur);
         numBtn5.setFocusable(false);
         numBtn5.addActionListener(this);
 
@@ -176,7 +178,7 @@ public class Frame extends JFrame implements ActionListener{
         numBtn6.setForeground(new Color(255, 255, 255));
         numBtn6.setText("6");
         numBtn6.setBorderPainted(false);
-        numBtn6.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        numBtn6.setCursor(cur);
         numBtn6.setFocusable(false);
         numBtn6.addActionListener(this);
 
@@ -185,7 +187,7 @@ public class Frame extends JFrame implements ActionListener{
         mulBtn.setForeground(new Color(0, 0, 0));
         mulBtn.setText("*");
         mulBtn.setBorderPainted(false);
-        mulBtn.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        mulBtn.setCursor(cur);
         mulBtn.setFocusable(false);
         mulBtn.addActionListener(this);
 
@@ -194,7 +196,7 @@ public class Frame extends JFrame implements ActionListener{
         numBtn8.setForeground(new Color(255, 255, 255));
         numBtn8.setText("8");
         numBtn8.setBorderPainted(false);
-        numBtn8.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        numBtn8.setCursor(cur);
         numBtn8.setFocusable(false);
         numBtn8.addActionListener(this);
 
@@ -203,7 +205,7 @@ public class Frame extends JFrame implements ActionListener{
         numBtn9.setForeground(new Color(255, 255, 255));
         numBtn9.setText("9");
         numBtn9.setBorderPainted(false);
-        numBtn9.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        numBtn9.setCursor(cur);
         numBtn9.setFocusable(false);
         numBtn9.addActionListener(this);
 
@@ -212,7 +214,7 @@ public class Frame extends JFrame implements ActionListener{
         numBtn7.setForeground(new Color(255, 255, 255));
         numBtn7.setText("7");
         numBtn7.setBorderPainted(false);
-        numBtn7.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        numBtn7.setCursor(cur);
         numBtn7.setFocusable(false);
         numBtn7.addActionListener(this);
 
@@ -221,7 +223,7 @@ public class Frame extends JFrame implements ActionListener{
         divBtn.setForeground(new Color(0, 0, 0));
         divBtn.setText("/");
         divBtn.setBorderPainted(false);
-        divBtn.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        divBtn.setCursor(cur);
         divBtn.setFocusable(false);
         divBtn.addActionListener(this);
 
@@ -404,6 +406,7 @@ public class Frame extends JFrame implements ActionListener{
             tf.setText(String.valueOf(result));
             num1 = result;
             num2 = 0;
+            op = '+';
         }
         if(e.getSource()==cBtn) {
             String s=tf.getText();
