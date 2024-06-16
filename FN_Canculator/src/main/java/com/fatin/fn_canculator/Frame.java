@@ -75,6 +75,7 @@ public class Frame extends JFrame implements ActionListener{
         tf.setForeground(new Color(255, 255, 255));
         tf.setBorder(null);
         tf.setCursor(new Cursor(Cursor.TEXT_CURSOR));
+        tf.setHorizontalAlignment(JTextField.RIGHT);
 
         cBtn.setBackground(new Color(200, 0, 54));
         cBtn.setFont(new Font("Segoe UI", 1, 30)); // NOI18N
