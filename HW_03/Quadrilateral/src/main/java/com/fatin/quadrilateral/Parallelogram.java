@@ -1,16 +1,12 @@
 package com.fatin.quadrilateral;
 
 public class Parallelogram extends Quadrilateral{
-    private int height; 
-    public Parallelogram(Point p1, Point p2, Point p3, Point p4, int height) {
-        super(p1, p2, p3, p4);
-        this.height = height;
+    public Parallelogram(Point A, Point B, Point C, Point D) {
+        super(A, B, C, D);
     }
-
-    public float area() {
-        float ab = getLength(getP1(), getP2());
-        float bc = getLength(getP2(), getP3());
-        if(ab>bc) return ab*height;
-        else return bc*height;
+    
+    public double area(){
+        double area= 0.5 * Math.abs(getA().getX()*getB().getY()+getB().getX()*getC().getY()+getC().getX()*getD().getY()+getD().getX()*getA().getY()-getA().getY()*getB().getX()-getB().getY()*getC().getX()-getC().getY()*getD().getX()-getD().getY()*getA().getX());
+        return area;
     }
 }
