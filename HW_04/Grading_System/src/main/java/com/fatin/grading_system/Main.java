@@ -19,6 +19,6 @@ public class Main {
         System.out.println(es2);
         System.out.println(es3);
         System.out.println(as);
-        System.out.println(ps);
+        System.out.println(ps);    
     }
 }
