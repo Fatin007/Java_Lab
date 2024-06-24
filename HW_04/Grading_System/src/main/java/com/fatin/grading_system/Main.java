@@ -3,19 +3,22 @@ package com.fatin.grading_system;
 public class Main {
     public static void main(String[] args) {
         System.out.println();
-        ExamStudent es1 = new ExamStudent("Alice", 1);
-        ExamStudent es2 = new ExamStudent("Bob", 2);
-        AssignmentStudent as = new AssignmentStudent("Charlie", 3);
-        ProjectStudent ps = new ProjectStudent("David", 4);
+        ExamStudent es1 = new ExamStudent("Alice", "B210501");
+        ExamStudent es2 = new ExamStudent("Bob", "B210502");
+        ExamStudent es3 = new ExamStudent("Charlie", "B210503");
+        AssignmentStudent as = new AssignmentStudent("David", "B210504");
+        ProjectStudent ps = new ProjectStudent("Eve", "B210505");
         
         es1.inputGrades(new double[]{85.0, 90.0, 88.0});
         es2.inputGrades(new String[]{"A", "B", "B+", "A+", "A"});
+        es3.inputGrades(new float[]{3.75f, 3.5f, 3.25f, 3.0f, 2.75f});
         as.inputGrades(new double[]{75.0, 80.0, 82.0});
         ps.inputGrades(92);
         
-        System.out.printf("%s's Final Exam Grade: %.2f\n\n", es1.name, es1.calculateFinalGrade());
-        System.out.printf("%s's Final Exam Grade: %.2f\n\n", es2.name, es2.calculateFinalGrade());
-        System.out.printf("%s's Assignment Grade: %.2f\n\n", as.name, as.calculateFinalGrade());
-        System.out.printf("%s's Project Grade: %.2f\n\n", ps.name, ps.calculateFinalGrade());
+        System.out.println(es1);
+        System.out.println(es2);
+        System.out.println(es3);
+        System.out.println(as);
+        System.out.println(ps);
     }
 }

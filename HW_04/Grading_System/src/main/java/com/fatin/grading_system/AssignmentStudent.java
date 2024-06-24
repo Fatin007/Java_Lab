@@ -2,8 +2,9 @@ package com.fatin.grading_system;
 
 class AssignmentStudent extends Student {
     private double[] assignmentMarks;
+    private double finalGrade;
     
-    public AssignmentStudent(String name, int id) {
+    public AssignmentStudent(String name, String id) {
         super(name, id);
     }
     
@@ -13,7 +14,7 @@ class AssignmentStudent extends Student {
     }
     
     @Override
-    public double calculateFinalGrade(){
+    public void calculateFinalGrade(){
         double totalGPA = 0;
         for (double x : assignmentMarks) {
             if(x>=80 && x<=100) totalGPA+=4.0;
@@ -27,6 +28,13 @@ class AssignmentStudent extends Student {
             else if(x>=40) totalGPA+=2.0;
             else totalGPA+=0.0;
         }
-        return totalGPA / assignmentMarks.length;
+        finalGrade = totalGPA / assignmentMarks.length;
+    }
+
+    @Override
+    public String toString() {
+        calculateFinalGrade();
+        String x=String.format("%.2f", finalGrade);
+        return super.toString() + "Grade: " + x + "\n";
     }
 }

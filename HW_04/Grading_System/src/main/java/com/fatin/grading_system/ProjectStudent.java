@@ -2,8 +2,9 @@ package com.fatin.grading_system;
 
 class ProjectStudent extends Student {
     private double projectGrade;
+    private double finalGrade;
     
-    public ProjectStudent(String name, int id) {
+    public ProjectStudent(String name, String id) {
         super(name, id);
     }
     
@@ -13,7 +14,14 @@ class ProjectStudent extends Student {
     }
     
     @Override
-    public double calculateFinalGrade() {
-        return projectGrade;
+    public void calculateFinalGrade() {
+        finalGrade = projectGrade;
+    }
+
+    @Override
+    public String toString() {
+        calculateFinalGrade();
+        String x=String.format("%.2f", finalGrade);
+        return super.toString() + "Grade: " + x + "\n";
     }
 }
