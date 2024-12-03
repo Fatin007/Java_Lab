@@ -42,16 +42,16 @@ public class Main {
         }
     }
 
-    static void create(Scanner sc) {
+    static void create(Scanner sc){
         System.out.print("\nEnter account number: ");
-        String accNo = sc.nextLine();
+        String accNo=sc.nextLine();
         System.out.print("Enter account holder name: ");
-        String name = sc.nextLine();
+        String name=sc.nextLine();
         System.out.print("Enter initial balance: ");
-        double balance = sc.nextDouble();
+        double balance=sc.nextDouble();
         System.out.print("Enter account type: ");
-        String type = sc.nextLine();
-        a[cnt] = new Account(accNo, name, balance, type);
+        String type=sc.nextLine();
+        a[cnt]=new Account(accNo, name, balance, type);
         System.out.println("Account created successfully.\n");
         cnt++;
     }
